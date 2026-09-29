@@ -1,0 +1,26 @@
+[project]
+name = "LLM_Eval_Workbench"
+version = "0.1.0"
+description = "A local, deterministic workbench for human evaluation of LLM responses"
+readme = "README.md"
+authors = [
+    { name = "Nahid", email = "195166929+NahidM42@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+llm-eval = "llm_eval_workbench.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

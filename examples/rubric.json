@@ -1,0 +1,70 @@
+{
+  "rubric_id": "llm-response-quality",
+  "version": "1.0",
+  "scale": {
+    "min": 1,
+    "max": 5
+  },
+  "criteria": [
+    {
+      "id": "instruction_following",
+      "name": "Instruction Following",
+      "description": "Whether the response follows explicit task instructions and constraints.",
+      "scoring_anchors": {
+        "1": "Major failure to follow the requested task.",
+        "2": "Several important instructions or constraints are violated.",
+        "3": "Core task is addressed, but meaningful instructions or constraints are missed.",
+        "4": "Nearly all relevant instructions are followed with only minor deviations.",
+        "5": "All relevant explicit instructions and constraints are followed correctly."
+      }
+    },
+    {
+      "id": "factual_accuracy",
+      "name": "Factual Accuracy",
+      "description": "Correctness of externally verifiable claims relative to available evidence or reference material.",
+      "scoring_anchors": {
+        "1": "Fundamental or numerous factual errors.",
+        "2": "Several important factual errors.",
+        "3": "Mostly correct but contains a meaningful error or imprecision.",
+        "4": "Correct overall with at most minor factual imprecision.",
+        "5": "No factual error is detected using the available evidence."
+      }
+    },
+    {
+      "id": "relevance",
+      "name": "Relevance",
+      "description": "Whether content directly contributes to answering the prompt.",
+      "scoring_anchors": {
+        "1": "Mostly irrelevant.",
+        "2": "Large portions are irrelevant.",
+        "3": "Mostly relevant but includes meaningful digression.",
+        "4": "Highly relevant with minor unnecessary content.",
+        "5": "All material is directly relevant to the task."
+      }
+    },
+    {
+      "id": "completeness",
+      "name": "Completeness",
+      "description": "Whether all important parts of the request are adequately addressed.",
+      "scoring_anchors": {
+        "1": "Major requested components are missing.",
+        "2": "Several important components are missing.",
+        "3": "Core request is answered but meaningful omissions remain.",
+        "4": "Nearly complete with only minor omissions.",
+        "5": "All necessary aspects are adequately addressed."
+      }
+    },
+    {
+      "id": "clarity",
+      "name": "Clarity",
+      "description": "Comprehensibility, organization, precision, and readability.",
+      "scoring_anchors": {
+        "1": "Very difficult to understand.",
+        "2": "Significant clarity or organization problems.",
+        "3": "Understandable but has noticeable clarity or organization weaknesses.",
+        "4": "Clear and well organized.",
+        "5": "Exceptionally clear, precise, coherent, and well organized."
+      }
+    }
+  ]
+}
